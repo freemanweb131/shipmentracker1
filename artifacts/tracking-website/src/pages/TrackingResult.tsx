@@ -32,7 +32,7 @@ const steps = [
     label: "Picked up",
     date: "Mar 18, 2026",
     time: "3:45 PM",
-    location: "NEW YORK, NY",
+    location: "NEW ORLEANS, LA",
     done: true,
   },
   {
@@ -41,16 +41,16 @@ const steps = [
     date: "Mar 19, 2026",
     time: "8:22 AM",
     location: "MEMPHIS, TN",
-    done: true,
+    done: false,
+    active: true,
   },
   {
     id: 4,
     label: "Out for delivery",
-    date: "Mar 20, 2026",
-    time: "7:55 AM",
-    location: "HATTIESBURG, MS",
-    done: true,
-    active: true,
+    date: "",
+    time: "",
+    location: "",
+    done: false,
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ function StatusBadge() {
   return (
     <span className="inline-flex items-center gap-1.5 bg-purple-100 text-[#4d148c] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
       <Truck size={13} />
-      Out for Delivery
+      In Transit
     </span>
   );
 }
@@ -160,7 +160,7 @@ export default function TrackingResult() {
               <div>
                 <StatusBadge />
                 <p className="text-white text-2xl font-bold mt-2">
-                  Estimated delivery: Today by 8:00 PM
+                  Estimated delivery: Mar 22, 2026
                 </p>
               </div>
               <div className="text-right">
@@ -272,18 +272,16 @@ export default function TrackingResult() {
               <MapPin size={18} className="text-[#4d148c]" />
               <span className="font-semibold text-gray-900 text-sm">Receiver information</span>
             </div>
-            <div className="px-6 py-5 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="px-6 py-5 grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Name</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Recipient</p>
                 <p className="text-sm font-medium text-gray-900">Dwaine Braasch</p>
+                <p className="text-sm text-gray-600">118 College Drive Box 4933</p>
+                <p className="text-sm text-gray-600">Hattiesburg, MS 39406</p>
               </div>
               <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Address</p>
-                <p className="text-sm font-medium text-gray-900">118 College Drive Box 4933</p>
-              </div>
-              <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">City / State / ZIP</p>
-                <p className="text-sm font-medium text-gray-900">Hattiesburg, MS 39406</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Sender</p>
+                <p className="text-sm text-gray-600">New Orleans, LA US</p>
               </div>
             </div>
           </div>
