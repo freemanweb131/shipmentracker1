@@ -254,7 +254,6 @@ export default function TrackingResult() {
                   {[
                     { label: "Tracking number", value: trackingNumber },
                     { label: "Service", value: "FedEx Ground" },
-                    { label: "Weight", value: "2.5 lbs" },
                   ].map(({ label, value }) => (
                     <div key={label}>
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{label}</p>
