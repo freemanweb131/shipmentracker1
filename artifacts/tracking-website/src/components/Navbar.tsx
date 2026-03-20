@@ -6,22 +6,6 @@ const navItems = [
     label: "Shipping",
     dropdown: ["Create a Shipment", "Schedule a Pickup", "Shipping Rates & Fees", "International Shipping", "Freight Shipping"],
   },
-  {
-    label: "Tracking",
-    dropdown: ["Track by Tracking Number", "Track by Reference", "Track by Barcode", "Manage Deliveries", "Tracking FAQs"],
-  },
-  {
-    label: "Design & Print",
-    dropdown: ["Shipping Supplies", "Custom Packaging", "Business Cards", "Banners & Signs", "Promotional Items"],
-  },
-  {
-    label: "Locations",
-    dropdown: ["Find a Location", "Drop Off Locations", "Ship to a Location", "Retail Hours"],
-  },
-  {
-    label: "Support",
-    dropdown: ["Contact Us", "FAQs", "Claims", "Service Alerts", "Small Business Center"],
-  },
 ];
 
 export default function Navbar() {
