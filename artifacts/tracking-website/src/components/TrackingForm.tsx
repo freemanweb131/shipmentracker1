@@ -21,7 +21,7 @@ const tabHelp: Record<TrackTab, string> = {
 
 const tabLabel: Record<TrackTab, string> = {
   number: "Tracking number",
-  reference: "Reference number",
+  reference: "Tracking number",
   tcn: "TCN number",
   proof: "Tracking number",
 };
