@@ -48,7 +48,7 @@ const steps = [
     label: "Out for delivery",
     date: "Mar 20, 2026",
     time: "7:55 AM",
-    location: "LOS ANGELES, CA",
+    location: "HATTIESBURG, MS",
     done: true,
     active: true,
   },
@@ -167,7 +167,7 @@ export default function TrackingResult() {
                 <p className="text-purple-200 text-xs uppercase tracking-wider mb-1">Delivering to</p>
                 <p className="text-white font-semibold text-sm flex items-center gap-1 justify-end">
                   <MapPin size={13} />
-                  Los Angeles, CA 90001
+                  Hattiesburg, MS 39406
                 </p>
               </div>
             </div>
