@@ -15,12 +15,6 @@ const companyLinks = [
   { label: "Investor Relations", href: "#" },
   { label: "Careers", href: "#" },
 ];
-const companyLinks2 = [
-  { label: "FedEx Blog", href: "#" },
-  { label: "Corporate Responsibility", href: "#" },
-  { label: "Newsroom", href: "#" },
-  { label: "Contact Us", href: "#" },
-];
 const moreFedex = [
   { label: "FedEx Compatible", href: "#" },
   { label: "FedEx Developer Portal", href: "#" },
@@ -59,20 +53,6 @@ export default function Footer() {
               {companyLinks.map(({ label, href }) => (
                 <li key={label}>
                   <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Our Company col 2 */}
-          <div>
-            <h4 className="text-xs font-bold text-transparent uppercase tracking-wider mb-4">&nbsp;</h4>
-            <ul className="space-y-2">
-              {companyLinks2.map(({ label, href }) => (
-                <li key={label}>
-                  <a href={href} className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
                     {label}
                   </a>
                 </li>
