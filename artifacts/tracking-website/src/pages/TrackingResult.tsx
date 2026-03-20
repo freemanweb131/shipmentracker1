@@ -169,7 +169,7 @@ export default function TrackingResult() {
               <div>
                 <StatusBadge />
                 <p className="text-white text-2xl font-bold mt-2">
-                  Estimated delivery: Mar 22, 2026
+                  Estimated delivery: 20 March 2026
                 </p>
               </div>
               <div className="text-right">
