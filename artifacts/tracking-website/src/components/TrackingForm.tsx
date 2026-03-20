@@ -10,7 +10,7 @@ const tabs: { id: TrackTab; label: string }[] = [
 
 const tabHelp: Record<TrackTab, string> = {
   number:
-    "Enter up to 30 of your FedEx tracking, door tag, or FedEx Office order numbers (one per line).",
+    "Enter your reference tracking number below. This tracking system is only for sensitive items. If you are tracking a regular shipment, please use the standard tracking page.",
   reference:
     "Enter your reference tracking number below. This tracking system is only for sensitive items. If you are tracking a regular shipment, please use the standard tracking page.",
   tcn: "",
