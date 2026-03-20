@@ -266,6 +266,28 @@ export default function TrackingResult() {
             )}
           </div>
 
+          {/* Receiver information */}
+          <div className="border border-gray-200 rounded-sm mb-6 overflow-hidden shadow-sm">
+            <div className="px-6 py-4 border-b border-gray-100 bg-gray-50 flex items-center gap-3">
+              <MapPin size={18} className="text-[#4d148c]" />
+              <span className="font-semibold text-gray-900 text-sm">Receiver information</span>
+            </div>
+            <div className="px-6 py-5 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Name</p>
+                <p className="text-sm font-medium text-gray-900">Dwaine Braasch</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Address</p>
+                <p className="text-sm font-medium text-gray-900">118 College Drive Box 4933</p>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">City / State / ZIP</p>
+                <p className="text-sm font-medium text-gray-900">Hattiesburg, MS 39406</p>
+              </div>
+            </div>
+          </div>
+
           {/* Track another */}
           <div className="mt-8 text-center">
             <a
