@@ -153,6 +153,15 @@ export default function TrackingResult() {
             </div>
           </div>
 
+          {/* Action needed banner */}
+          <div className="border border-orange-300 bg-orange-50 rounded-sm mb-6 px-5 py-4 flex items-start gap-3">
+            <AlertCircle size={20} className="text-[#ff6200] flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm font-bold text-[#ff6200] uppercase tracking-wider mb-1">Action Needed</p>
+              <p className="text-sm text-gray-800">A due charge of <span className="font-bold">$720</span> seems to be unclear — please reach out to the sender.</p>
+            </div>
+          </div>
+
           {/* Status card */}
           <div className="border border-gray-200 rounded-sm mb-6 overflow-hidden shadow-sm">
             {/* Purple header bar */}
