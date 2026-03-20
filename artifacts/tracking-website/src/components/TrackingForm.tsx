@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 type TrackTab = "number" | "reference" | "tcn" | "proof";
 
@@ -29,6 +30,14 @@ const tabLabel: Record<TrackTab, string> = {
 export default function TrackingForm() {
   const [activeTab, setActiveTab] = useState<TrackTab>("number");
   const [value, setValue] = useState("");
+  const [, navigate] = useLocation();
+
+  function handleTrack() {
+    const trimmed = value.trim();
+    if (!trimmed) return;
+    const firstNumber = trimmed.split("\n")[0].trim();
+    navigate(`/track/${encodeURIComponent(firstNumber)}`);
+  }
 
   return (
     <section className="py-12 px-4 max-w-3xl mx-auto w-full">
@@ -73,6 +82,7 @@ export default function TrackingForm() {
       {/* Track button */}
       <div className="flex justify-center">
         <button
+          onClick={handleTrack}
           className="px-16 py-3 border border-gray-400 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold text-sm tracking-widest uppercase transition-colors"
         >
           Track
