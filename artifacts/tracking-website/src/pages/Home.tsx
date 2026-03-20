@@ -1,23 +1,19 @@
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import AlertBanner from "@/components/AlertBanner";
-import QuickLinks from "@/components/QuickLinks";
-import CtaSection from "@/components/CtaSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import ServicesSection from "@/components/ServicesSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import TrackingForm from "@/components/TrackingForm";
+import DeliveriesSection from "@/components/DeliveriesSection";
+import HelpSection from "@/components/HelpSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-1">
-        <HeroSection />
-        <AlertBanner />
-        <QuickLinks />
-        <CtaSection />
-        <FeaturesSection />
-        <ServicesSection />
+        <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Tracking" }]} />
+        <TrackingForm />
+        <DeliveriesSection />
+        <HelpSection />
       </main>
       <Footer />
     </div>

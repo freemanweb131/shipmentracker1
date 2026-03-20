@@ -6,29 +6,35 @@ import {
   Linkedin,
   Youtube,
   Globe,
+  ArrowUp,
 } from "lucide-react";
 
-const companyLinks = [
-  "About FedEx",
-  "Our Portfolio",
-  "Investor Relations",
-  "Careers",
-];
-
-const companyLinks2 = [
-  "FedEx Blog",
-  "Corporate Responsibility",
-  "Newsroom",
-  "Contact Us",
-];
-
+const companyLinks = ["About FedEx", "Our Portfolio", "Investor Relations", "Careers"];
+const companyLinks2 = ["FedEx Blog", "Corporate Responsibility", "Newsroom", "Contact Us"];
 const moreFedex = ["FedEx Compatible", "FedEx Developer Portal", "FedEx Logistics"];
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 border-t border-gray-200">
+    <footer className="bg-gray-100 border-t border-gray-200 relative">
+      {/* Back to top button */}
+      <div className="flex justify-end max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <button
+          onClick={scrollToTop}
+          className="flex items-center gap-2 bg-[#4d148c] hover:bg-[#3a0f6b] text-white text-sm font-bold px-5 py-3 rounded-full transition-colors uppercase tracking-wider"
+        >
+          Back to top
+          <span className="bg-white/20 rounded-full p-1">
+            <ArrowUp size={14} />
+          </span>
+        </button>
+      </div>
+
       {/* Main footer links */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Our Company col 1 */}
           <div>
@@ -48,9 +54,7 @@ export default function Footer() {
 
           {/* Our Company col 2 */}
           <div>
-            <h4 className="text-xs font-bold text-transparent uppercase tracking-wider mb-4">
-              &nbsp;
-            </h4>
+            <h4 className="text-xs font-bold text-transparent uppercase tracking-wider mb-4">&nbsp;</h4>
             <ul className="space-y-2">
               {companyLinks2.map((link) => (
                 <li key={link}>
@@ -97,9 +101,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
+        {/* Divider + Social */}
         <div className="border-t border-gray-300 mt-10 pt-8">
-          {/* Social Icons */}
           <div className="flex items-center gap-4 flex-wrap">
             <span className="text-xs font-bold text-[#4d148c] uppercase tracking-wider mr-2">
               Follow FedEx
@@ -131,12 +134,10 @@ export default function Footer() {
           <span>© FedEx 1995–2026</span>
           <div className="flex flex-wrap items-center gap-4">
             {["Site Map", "Cookie Consent", "Terms of Use", "Privacy & Security", "Ad Choices"].map(
-              (item, i) => (
+              (item, i, arr) => (
                 <span key={item} className="flex items-center gap-4">
-                  <a href="#" className="hover:underline">
-                    {item}
-                  </a>
-                  {i < 4 && <span className="text-purple-300">|</span>}
+                  <a href="#" className="hover:underline">{item}</a>
+                  {i < arr.length - 1 && <span className="text-purple-300">|</span>}
                 </span>
               )
             )}
