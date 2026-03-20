@@ -11,9 +11,9 @@ import {
 
 const companyLinks = [
   { label: "About FedEx", href: "https://about.usps.com/" },
-  { label: "Our Portfolio", href: "https://about.usps.com/" },
-  { label: "Investor Relations", href: "https://www.usps.com/globals/site-index.htm" },
-  { label: "Careers", href: "https://about.usps.com/newsroom/" },
+  { label: "Our Portfolio", href: "https://gateway.usps.com/" },
+  { label: "Investor Relations", href: "https://about.usps.com/what/government-services/" },
+  { label: "Careers", href: "https://gateway.usps.com/" },
 ];
 const moreFedex = [
   { label: "FedEx Compatible", href: "https://www.usps.com/globals/site-index.htm" },
