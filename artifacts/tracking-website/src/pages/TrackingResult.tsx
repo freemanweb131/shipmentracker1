@@ -289,7 +289,8 @@ export default function TrackingResult() {
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Sender</p>
-                <p className="text-sm text-gray-600">New Orleans, LA US</p>
+                <p className="text-sm font-medium text-gray-900">Allison</p>
+                <p className="text-sm text-gray-600">Baton Rouge, LA</p>
               </div>
             </div>
           </div>
