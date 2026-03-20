@@ -122,16 +122,18 @@ export default function Footer() {
               Follow FedEx
             </span>
             {[
-              { Icon: Mail, label: "Email" },
-              { Icon: Facebook, label: "Facebook" },
-              { Icon: Twitter, label: "Twitter" },
-              { Icon: Instagram, label: "Instagram" },
-              { Icon: Linkedin, label: "LinkedIn" },
-              { Icon: Youtube, label: "YouTube" },
-            ].map(({ Icon, label }) => (
+              { Icon: Mail, label: "Email", href: "#" },
+              { Icon: Facebook, label: "Facebook", href: "https://www.facebook.com/USPS?rf=108501355848630" },
+              { Icon: Twitter, label: "Twitter", href: "#" },
+              { Icon: Instagram, label: "Instagram", href: "https://www.instagram.com/uspostalservice/?hl=en" },
+              { Icon: Linkedin, label: "LinkedIn", href: "#" },
+              { Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/usps" },
+            ].map(({ Icon, label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                target={href !== "#" ? "_blank" : undefined}
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="w-9 h-9 rounded-full border border-gray-400 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:border-gray-600 transition-colors"
               >
