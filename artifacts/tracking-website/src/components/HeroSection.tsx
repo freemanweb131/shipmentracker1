@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Package, MapPin, ArrowRight, Search } from "lucide-react";
+import heroBg from "@assets/image_1774043522410.png";
 
 type Tab = "rate-ship" | "track" | "locations";
 
@@ -15,24 +16,23 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[520px] flex items-center overflow-hidden">
-      {/* Background gradient simulating outdoor delivery photo */}
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-gray-800/80 via-gray-700/60 to-transparent"
-        style={{ zIndex: 1 }}
-      />
+      {/* Real background photo */}
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(135deg, #2d1b5e 0%, #4a2d8a 30%, #6b4db5 60%, #8a6fc5 80%, #a88dd4 100%)",
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
           zIndex: 0,
         }}
       />
 
-      {/* Decorative element to simulate a delivery person / truck silhouette */}
+      {/* Dark overlay to ensure text readability */}
       <div
-        className="absolute right-0 top-0 bottom-0 w-1/2 opacity-30"
+        className="absolute inset-0"
         style={{
-          background: "linear-gradient(to left, rgba(139, 90, 200, 0.3), transparent)",
+          background: "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.05) 100%)",
           zIndex: 1,
         }}
       />
@@ -44,7 +44,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Tab Widget */}
-          <div className="bg-white/10 backdrop-blur-sm inline-flex rounded-sm overflow-hidden mb-0 shadow-xl">
+          <div className="inline-flex shadow-xl mb-0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
