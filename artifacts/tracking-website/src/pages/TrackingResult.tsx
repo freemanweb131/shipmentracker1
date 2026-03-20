@@ -22,7 +22,7 @@ const steps = [
   {
     id: 1,
     label: "Shipment information sent to FedEx",
-    date: "Mar 18, 2026",
+    date: "Mar 19, 2026",
     time: "10:14 AM",
     location: "Online",
     done: true,
