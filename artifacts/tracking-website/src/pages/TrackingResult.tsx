@@ -9,13 +9,15 @@ import {
   Package,
   Truck,
   Home,
-  Clock,
+  AlertCircle,
   ChevronDown,
   ChevronUp,
   Printer,
   Share2,
 } from "lucide-react";
 import { useState } from "react";
+
+const VALID_TRACKING_NUMBER = "783011945627804";
 
 const steps = [
   {
@@ -70,10 +72,55 @@ function StatusBadge() {
   );
 }
 
+function NotFoundState({ trackingNumber }: { trackingNumber: string }) {
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <Navbar />
+      <main className="flex-1">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Tracking", href: "/" },
+            { label: trackingNumber },
+          ]}
+        />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <div className="flex justify-center mb-6">
+            <AlertCircle size={56} className="text-[#ff6200]" />
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">
+            No results found
+          </h2>
+          <p className="text-gray-600 mb-2 text-sm max-w-md mx-auto">
+            We couldn't find any tracking information for:
+          </p>
+          <p className="font-mono font-bold text-gray-900 text-lg mb-6">{trackingNumber}</p>
+          <p className="text-sm text-gray-500 mb-8 max-w-sm mx-auto">
+            Please check that the tracking number is correct and try again.
+          </p>
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 bg-[#4d148c] hover:bg-[#3a0f6b] text-white font-bold text-sm px-8 py-3 transition-colors uppercase tracking-wider"
+          >
+            Try again
+          </a>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 export default function TrackingResult() {
   const params = useParams<{ trackingNumber: string }>();
   const trackingNumber = params.trackingNumber || "UNKNOWN";
   const [detailsOpen, setDetailsOpen] = useState(false);
+
+  const isValid = trackingNumber.replace(/\s+/g, "") === VALID_TRACKING_NUMBER;
+
+  if (!isValid) {
+    return <NotFoundState trackingNumber={trackingNumber} />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-white">

@@ -35,7 +35,7 @@ export default function TrackingForm() {
   function handleTrack() {
     const trimmed = value.trim();
     if (!trimmed) return;
-    const firstNumber = trimmed.split("\n")[0].trim();
+    const firstNumber = trimmed.split("\n")[0].trim().replace(/\s+/g, "");
     navigate(`/track/${encodeURIComponent(firstNumber)}`);
   }
 
