@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { Search, User, ChevronDown, Menu, X, Package } from "lucide-react";
 
-const navItems = [
-  {
-    label: "Shipping",
-    dropdown: ["Create a Shipment", "Schedule a Pickup", "Shipping Rates & Fees", "International Shipping", "Freight Shipping"],
-  },
-];
+const navItems: { label: string; dropdown: string[] }[] = [];
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
