@@ -8,7 +8,6 @@ import {
   MapPin,
   Package,
   Truck,
-  Home,
   AlertCircle,
   ChevronDown,
   ChevronUp,
@@ -256,11 +255,6 @@ export default function TrackingResult() {
                     { label: "Tracking number", value: trackingNumber },
                     { label: "Service", value: "FedEx Ground" },
                     { label: "Weight", value: "2.5 lbs" },
-                    { label: "Dimensions", value: '12" × 9" × 4"' },
-                    { label: "Total pieces", value: "1" },
-                    { label: "Total shipment weight", value: "2.5 lbs" },
-                    { label: "Packaging", value: "FedEx Box" },
-                    { label: "Special handling", value: "None" },
                   ].map(({ label, value }) => (
                     <div key={label}>
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{label}</p>
@@ -270,36 +264,6 @@ export default function TrackingResult() {
                 </div>
               </div>
             )}
-          </div>
-
-          {/* Delivery address card */}
-          <div className="border border-gray-200 rounded-sm overflow-hidden shadow-sm">
-            <div className="px-6 py-4 border-b border-gray-100 bg-gray-50 flex items-center gap-3">
-              <Home size={18} className="text-[#4d148c]" />
-              <span className="font-semibold text-gray-900 text-sm">Delivery address</span>
-            </div>
-            <div className="px-6 py-5 flex flex-col sm:flex-row gap-8">
-              <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Recipient</p>
-                <p className="text-sm font-medium text-gray-900">John Doe</p>
-                <p className="text-sm text-gray-600">123 Main Street</p>
-                <p className="text-sm text-gray-600">Los Angeles, CA 90001</p>
-                <p className="text-sm text-gray-600">United States</p>
-              </div>
-              <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Sender</p>
-                <p className="text-sm font-medium text-gray-900">Acme Corp</p>
-                <p className="text-sm text-gray-600">456 Commerce Blvd</p>
-                <p className="text-sm text-gray-600">New York, NY 10001</p>
-                <p className="text-sm text-gray-600">United States</p>
-              </div>
-              <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Shipped</p>
-                <p className="text-sm font-medium text-gray-900">Mar 18, 2026</p>
-                <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider mb-1">Estimated delivery</p>
-                <p className="text-sm font-bold text-[#4d148c]">Mar 20, 2026 by 8:00 PM</p>
-              </div>
-            </div>
           </div>
 
           {/* Track another */}

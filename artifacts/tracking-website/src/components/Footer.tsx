@@ -9,9 +9,23 @@ import {
   ArrowUp,
 } from "lucide-react";
 
-const companyLinks = ["About FedEx", "Our Portfolio", "Investor Relations", "Careers"];
-const companyLinks2 = ["FedEx Blog", "Corporate Responsibility", "Newsroom", "Contact Us"];
-const moreFedex = ["FedEx Compatible", "FedEx Developer Portal", "FedEx Logistics"];
+const companyLinks = [
+  { label: "About FedEx", href: "https://about.usps.com/" },
+  { label: "Our Portfolio", href: "#" },
+  { label: "Investor Relations", href: "#" },
+  { label: "Careers", href: "#" },
+];
+const companyLinks2 = [
+  { label: "FedEx Blog", href: "#" },
+  { label: "Corporate Responsibility", href: "#" },
+  { label: "Newsroom", href: "#" },
+  { label: "Contact Us", href: "#" },
+];
+const moreFedex = [
+  { label: "FedEx Compatible", href: "#" },
+  { label: "FedEx Developer Portal", href: "#" },
+  { label: "FedEx Logistics", href: "#" },
+];
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -42,10 +56,10 @@ export default function Footer() {
               Our Company
             </h4>
             <ul className="space-y-2">
-              {companyLinks.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
-                    {link}
+              {companyLinks.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
+                    {label}
                   </a>
                 </li>
               ))}
@@ -56,10 +70,10 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold text-transparent uppercase tracking-wider mb-4">&nbsp;</h4>
             <ul className="space-y-2">
-              {companyLinks2.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
-                    {link}
+              {companyLinks2.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
+                    {label}
                   </a>
                 </li>
               ))}
@@ -72,10 +86,10 @@ export default function Footer() {
               More From FedEx
             </h4>
             <ul className="space-y-2">
-              {moreFedex.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
-                    {link}
+              {moreFedex.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} className="text-sm text-gray-700 hover:text-gray-900 hover:underline">
+                    {label}
                   </a>
                 </li>
               ))}
