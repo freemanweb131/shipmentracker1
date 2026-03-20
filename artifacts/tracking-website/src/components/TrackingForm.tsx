@@ -6,8 +6,6 @@ type TrackTab = "number" | "reference" | "tcn" | "proof";
 const tabs: { id: TrackTab; label: string }[] = [
   { id: "number", label: "Tracking number" },
   { id: "reference", label: "Track by reference" },
-  { id: "tcn", label: "Track by TCN" },
-  { id: "proof", label: "Obtain proof of delivery" },
 ];
 
 const tabHelp: Record<TrackTab, string> = {
@@ -15,9 +13,8 @@ const tabHelp: Record<TrackTab, string> = {
     "Enter up to 30 of your FedEx tracking, door tag, or FedEx Office order numbers (one per line).",
   reference:
     "Enter your reference tracking number below. This tracking system is only for sensitive items. If you are tracking a regular shipment, please use the standard tracking page.",
-  tcn: "Enter your Transportation Control Number (TCN) to track your shipment.",
-  proof:
-    "Enter your tracking number to obtain proof of delivery documentation.",
+  tcn: "",
+  proof: "",
 };
 
 const tabLabel: Record<TrackTab, string> = {
