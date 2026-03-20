@@ -11,14 +11,14 @@ import {
 
 const companyLinks = [
   { label: "About FedEx", href: "https://about.usps.com/" },
-  { label: "Our Portfolio", href: "#" },
-  { label: "Investor Relations", href: "#" },
-  { label: "Careers", href: "#" },
+  { label: "Our Portfolio", href: "https://about.usps.com/" },
+  { label: "Investor Relations", href: "https://www.usps.com/globals/site-index.htm" },
+  { label: "Careers", href: "https://about.usps.com/newsroom/" },
 ];
 const moreFedex = [
-  { label: "FedEx Compatible", href: "#" },
-  { label: "FedEx Developer Portal", href: "#" },
-  { label: "FedEx Logistics", href: "#" },
+  { label: "FedEx Compatible", href: "https://www.usps.com/globals/site-index.htm" },
+  { label: "FedEx Developer Portal", href: "https://pe.usps.com/" },
+  { label: "FedEx Logistics", href: "https://about.usps.com/resources/" },
 ];
 
 function scrollToTop() {
