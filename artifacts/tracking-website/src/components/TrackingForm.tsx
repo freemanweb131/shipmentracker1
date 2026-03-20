@@ -70,11 +70,6 @@ export default function TrackingForm() {
         />
       </div>
 
-      {/* Need help */}
-      <a href="#" className="text-sm font-bold text-[#4d148c] hover:underline tracking-wider uppercase block mb-6">
-        Need help?
-      </a>
-
       {/* Track button */}
       <div className="flex justify-center">
         <button

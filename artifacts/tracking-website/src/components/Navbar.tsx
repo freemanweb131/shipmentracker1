@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, User, ChevronDown, Menu, X, Package } from "lucide-react";
+import { Search, ChevronDown, Menu, X } from "lucide-react";
 
 const navItems: { label: string; dropdown: string[] }[] = [];
 
@@ -59,10 +59,6 @@ export default function Navbar() {
 
             {/* Right Side Actions */}
             <div className="hidden lg:flex items-center gap-3">
-              <a href="#" className="flex items-center gap-1.5 text-sm font-medium text-white hover:text-gray-200 transition-colors whitespace-nowrap">
-                <User size={18} />
-                Sign Up or Log In
-              </a>
               <button className="text-white hover:text-gray-200 transition-colors">
                 <Search size={20} />
               </button>

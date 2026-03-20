@@ -130,18 +130,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="bg-[#4d148c] text-white py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center text-xs">
           <span>© FedEx 1995–2026</span>
-          <div className="flex flex-wrap items-center gap-4">
-            {["Site Map", "Cookie Consent", "Terms of Use", "Privacy & Security", "Ad Choices"].map(
-              (item, i, arr) => (
-                <span key={item} className="flex items-center gap-4">
-                  <a href="#" className="hover:underline">{item}</a>
-                  {i < arr.length - 1 && <span className="text-purple-300">|</span>}
-                </span>
-              )
-            )}
-          </div>
         </div>
       </div>
     </footer>
