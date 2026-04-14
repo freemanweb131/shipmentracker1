@@ -176,7 +176,7 @@ export default function TrackingResult() {
                 <p className="text-purple-200 text-xs uppercase tracking-wider mb-1">Delivering to</p>
                 <p className="text-white font-semibold text-sm flex items-center gap-1 justify-end">
                   <MapPin size={13} />
-                  Hattiesburg, MS 39406
+                  Augusta, GA 30909
                 </p>
               </div>
             </div>
@@ -283,14 +283,17 @@ export default function TrackingResult() {
             <div className="px-6 py-5 grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Recipient</p>
-                <p className="text-sm font-medium text-gray-900">Dwaine Braasch</p>
-                <p className="text-sm text-gray-600">118 College Drive Box 4933</p>
-                <p className="text-sm text-gray-600">Hattiesburg, MS 39406</p>
+                <p className="text-sm font-medium text-gray-900">Joseph Reeves</p>
+                <p className="text-sm text-gray-600">4016 Sibley Court</p>
+                <p className="text-sm text-gray-600">Augusta, GA 30909</p>
+                <p className="text-sm text-gray-600 mt-1">706 294 7038</p>
               </div>
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-bold">Sender</p>
-                <p className="text-sm font-medium text-gray-900">Allison</p>
-                <p className="text-sm text-gray-600">Baton Rouge, LA</p>
+                <p className="text-sm font-medium text-gray-900">Glitch Philip</p>
+                <p className="text-sm text-gray-600">609 Merrimac Ct</p>
+                <p className="text-sm text-gray-600">Modesto, CA 95354, USA</p>
+                <p className="text-sm text-gray-600 mt-1">385 685 0397</p>
               </div>
             </div>
           </div>
