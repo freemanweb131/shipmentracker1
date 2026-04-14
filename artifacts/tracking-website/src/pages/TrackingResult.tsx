@@ -158,7 +158,7 @@ export default function TrackingResult() {
             <AlertCircle size={20} className="text-[#ff6200] flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-bold text-[#ff6200] uppercase tracking-wider mb-1">Action Needed</p>
-              <p className="text-sm text-gray-800">An advance due charge of <span className="font-bold">$720</span> seems to be unclear / total fee: <span className="font-bold">$4,000</span></p>
+              <p className="text-sm text-gray-800">An advance due charge of <span className="font-bold">$1,750</span> seems to be unclear / total fee: <span className="font-bold">$4,000</span></p>
             </div>
           </div>
 
